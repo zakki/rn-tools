@@ -1,0 +1,13 @@
+# For more details about the format of this file, see DummyExperiment.clop
+Name GoguiExperiment
+#LinearParameter tgr1_rate -1 100
+LinearParameter c_puct 0.5 5.0
+LinearParameter value_scale 0.01 0.99
+IntegerParameter expand_threshold 2 40
+
+# You may have to change the location of python.exe below
+# You should modify GoguiScript.py to adapt it to your program
+#Script c:\programs\Python27\python.exe GoguiScript.py
+Script D:/cygwin64/bin/python2.7.exe RnScript.py
+Processor core1
+#Processor core2
