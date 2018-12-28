@@ -25,7 +25,7 @@ sub printgame
 		if ($sx eq "" || $sy eq "") {
 			$x = 20; $y = "z";
 		} else {
-			$x = $sy + 1; $y = $abcd[18 - $sx];
+			$x = 19 - $sy; $y = $abcd[$sx];
 		}
 		if ("$y$x" eq "z20") {
 			$y = "pass"; $x = "";
@@ -64,7 +64,7 @@ sub replaygame
 		if ($sx eq "" || $sy eq "") {
 			$x = 20; $y = "z";
 		} else {
-			$x = $sy + 1; $y = $abcd[18 - $sx];
+			$x = 19 - $sy; $y = $abcd[$sx];
 		}
 		if ("$y$x" eq "z20") {
 			$y = "pass"; $x = "";
@@ -163,13 +163,13 @@ my $file = $ARGV[0];
 		print STDERR "unknown rank\n";
 		# next;
 	}
-	@ranks = ($br__->[0], $wr__->[0]);
-	print STDERR $ranks[0] . " vs " . $ranks[1] . "\n";
-	if (($ranks[0] =~ /([1234]d|.*k)/)
-		or ($ranks[1] =~ /([1234]d|.*k)/)) {
-		# print STDERR "skip\n";
-		# next;
-	}
+	# @ranks = ($br__->[0], $wr__->[0]);
+	# print STDERR $ranks[0] . " vs " . $ranks[1] . "\n";
+	# if (($ranks[0] =~ /([1234]d|.*k)/)
+	# 	or ($ranks[1] =~ /([1234]d|.*k)/)) {
+	# 	# print STDERR "skip\n";
+	# 	# next;
+	# }
 	my $result = $result__->[0];
 	if ($result =~ /^[^BW].*/) {
 		print STDERR $result . " no result skip\n";

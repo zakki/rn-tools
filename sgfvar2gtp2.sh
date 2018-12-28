@@ -4,7 +4,7 @@ find $@ -name '*.sgf'|while read sgf
 do
 	echo $sgf
 	OUT="$(basename $sgf).gtp"
-	perl sgfvar2gtp2.pl $sgf > $OUT
+	perl `dirname $0`/sgfvar2gtp2.pl $sgf > $OUT
 	if [ ! -s $OUT ]
 	then
 		rm $OUT
